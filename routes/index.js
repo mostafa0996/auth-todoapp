@@ -7,7 +7,6 @@ router.get('/', forwardAuthenticated, (req, res) => res.render('welcome'));
 
 // Dashboard
 router.get('/dashboard', ensureAuthenticated, (req, res) =>{
-	console.log("User has logged in ", req.user);
 	res.render('dashboard', {
 		name: req.user.name,
 	});

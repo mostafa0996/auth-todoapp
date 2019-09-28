@@ -70,7 +70,6 @@ router.post('/register', async (req, res) => {
 					res.redirect('/users/login');
 				})
 				.catch(err => console.log(err));
-			console.log(newUser);
 		}
 	}
 });
@@ -82,7 +81,6 @@ router.post('/login', async (req, res, next) => {
 		failureRedirect: '/users/login',
 		failureFlash: true,
 	})(req, res, next);
-	// console.log('userId is  => ', req.body)
 });
 
 // Logout

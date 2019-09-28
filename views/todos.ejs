@@ -1,0 +1,7 @@
+<h1> Your Todos are </h1>
+<ul style="list-style: none;">
+    <% for(let i = 0; i < todos.length; i++ ){%>
+        <li style="text-align: left"><h4><%= todos[i].name %></h4></li>
+    <%} %>
+</ul>
+<a href="/dashboard" class="btn btn-info">Back to dashboard</a>
